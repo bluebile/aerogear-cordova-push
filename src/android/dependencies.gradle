@@ -2,6 +2,13 @@ repositories {
     mavenLocal()
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-v4:23.4.0'
+        force 'com.android.support:appcompat-v7:23.4.0'
+    }
+}
+
 dependencies {
     compile 'com.android.support:appcompat-v7:22.+'
     compile 'org.jboss.aerogear:aerogear-android-core:3.0.0'
