@@ -17,6 +17,7 @@ module.exports = function(ctx) {
     
         var versionParts = version.split('.');
         var mayorVersion = versionParts[0];
+        return getInstalledPlatformsWithVersions(util.isCordova());
         if (mayorVersion >= "8") {
             return getInstalledPlatformsWithVersions(util.isCordova());
         } else {
